@@ -11,7 +11,7 @@ h5:
     tokenEncryptKey: abcdefghigklmnop
     zhihuijia:
         #智慧嘉识别码
-        ident: zhihuijia
+        ident: jiafu
         #智慧嘉秘钥key
         key: 0d4e87d870c7429bcc29c92cbaf8feb8
         #智慧嘉回调地址
