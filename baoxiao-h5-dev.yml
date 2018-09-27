@@ -28,4 +28,5 @@ h5:
         gasReturnUrl: http://192.168.1.107/allLication
         #c端用户默认绑定企业geid
         defaultBindGeid: ge_0fdb4462_7eda4a0e79ada88d9dec
+        #c端用户默认绑定企业id
         defaultBindCompanyId: 1039736528094085122
