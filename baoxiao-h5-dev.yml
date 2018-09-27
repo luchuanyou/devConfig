@@ -24,4 +24,7 @@ h5:
         ident: zhihuijia
         #嘉福总部秘钥key
         key: 0d4e87d870c7429bcc29c92cbaf8feb8
+        #嘉福回调智慧嘉地址
         gasReturnUrl: http://192.168.1.107/allLication
+        #c端用户默认绑定企业geid
+        defaultBindGeid: ge_0fdb4462_7eda4a0e79ada88d9dec
