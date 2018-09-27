@@ -7,6 +7,9 @@ fdfs:
     
 #H5配置参数
 h5:
+    file: 
+        #文件服务器配置映射地址
+        fileHost: http://192.168.1.112:8888/
     #token秘钥
     tokenEncryptKey: abcdefghigklmnop
     zhihuijia:
