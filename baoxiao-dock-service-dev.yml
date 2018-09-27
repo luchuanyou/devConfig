@@ -1,14 +1,22 @@
 server:
-  #port: 4747
+  port: 4747
 #Redis cache 过期时间设置
 redis:
   cache:
     expiration: 3600
 
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: dock
+    password: rshcbxf,xfhbcxs
+    url: jdbc:mysql://192.168.1.109:3306/zhj_dock?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+
+#mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   typeAliasesPackage: com.taolue.dock.entity
- 
+
   global-config:
     #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
     id-type: 5
@@ -25,21 +33,22 @@ mybatis-plus:
     logic-not-delete-value: 0
     sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
     #自定义填充策略接口实现
-    #meta-object-handler: 
-    
+    #meta-object-handler:
+
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: true
 
-  
-## 嘉福接口url    
-baoxiao-dock-service-jiafu_url: https://test.jia-fu.cn/gw-api
+
+
+
+
 ## 嘉福接口签名加密key
 baoxiao-dock-service-jiafu_secret: 0d4e87d870c7429bcc29c92cbaf8feb8
 ## 嘉福接口ident（接入识别码）参数
 baoxiao-dock-service-ident: zhihuijia
 ## 嘉福接口实名认证或银行卡认证 是否调用接口开关
-baoxiao-dock-service-open_interface: true
+baoxiao-dock-service-open_interface: false
 ## 收银台url回调
 baoxiao-enterprise-callback-url: http://baoxiao-enterprise:4009/coupon/apply/confirmPayment?
 ## 对外服务验签接口密钥
@@ -50,7 +59,7 @@ baoxiao-dock-service-syt_channel: JF-QAP
 baoxiao-dock-service-syt_url: https://test.jia-fu.cn/gateway/portal
 ## 微信相关配置
 weixin:
-     common: 
+     common:
          appID: wx1c2cd1f32c1364ba
          appsecret: caa0426eed88031dba6d9190c94d70eb
      host:
@@ -61,7 +70,3 @@ weixin:
      api:
         url:
             access_token: /cgi-bin/token
-    
-
-
-
