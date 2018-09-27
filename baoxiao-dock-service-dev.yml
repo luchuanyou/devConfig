@@ -39,6 +39,11 @@ redis:
   #  map-underscore-to-camel-case: true
   #  cache-enabled: true
   ## 嘉福接口签名加密key
+
+  
+## 嘉福接口url    
+baoxiao-dock-service-jiafu_url: https://test.jia-fu.cn/gw-api
+## 嘉福接口签名加密key
 baoxiao-dock-service-jiafu_secret: 0d4e87d870c7429bcc29c92cbaf8feb8
 ## 嘉福接口ident（接入识别码）参数
 baoxiao-dock-service-ident: zhihuijia
@@ -48,6 +53,23 @@ baoxiao-dock-service-open_interface: true
 baoxiao-enterprise-callback-url: http://baoxiao-enterprise:4009/coupon/apply/confirmPayment?
 ## 对外服务验签接口密钥
 baoxiao-dock-service-secret: zhihuijia
+## 收银台接入标识
+baoxiao-dock-service-syt_channel: JF-QAP
+## 收银台请求url
+baoxiao-dock-service-syt_url: https://test.jia-fu.cn/gateway/portal
+## 微信相关配置
+weixin:
+     common: 
+         appID: wx1c2cd1f32c1364ba
+         appsecret: caa0426eed88031dba6d9190c94d70eb
+     host:
+         host-common: https://api.weixin.qq.com
+         host-sh: https://sh.api.weixin.qq.com
+         host-sz: https://sz.api.weixin.qq.com
+         host-hk: https://hk.api.weixin.qq.com
+     api:
+        url:
+            access_token: /cgi-bin/token
     
 
 
