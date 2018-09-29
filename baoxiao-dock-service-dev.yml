@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: developer
     password: taolue-2018 #ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
-    url: jdbc:mysql://192.168.1.10:3306/zhj_dock?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://192.168.1.10:3306/zhj_dock?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useUnicode=true
 
 #mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
 mybatis-plus:
@@ -54,6 +54,18 @@ baoxiao-dock-service-secret: zhihuijia
 baoxiao-dock-service-syt_channel: JF-QAP
 ## 收银台请求url
 baoxiao-dock-service-syt_url: https://test.jia-fu.cn/gateway/portal
+
+## 短信发送开关
+dock-property-sms_flag: no
+
+####百望配置
+baiwang: 
+    common: 
+         client_id: 91310107MA1G0PT57D
+         token: 1132ec7ae2ba4a8abc1d6c79fb56e4a2
+    url:   
+        checked_url: http://zhipiaoyun.com/vat-tgw/api/callservice.do
+
 ## 微信相关配置
 weixin:
      common: 
