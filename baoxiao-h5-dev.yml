@@ -38,3 +38,5 @@ h5:
         mallKey: defde7ec0e86a6d183d9302877e5b3d7
         #嘉福总部首页商城来源
         mallSource: jfapp
+        #嘉福总部首页商城请求地址
+        mallUrl: https://jd-test.jia-fu.cn/shelf
