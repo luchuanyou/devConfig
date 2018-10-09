@@ -59,5 +59,6 @@ ignore:
     - /swagger/api-docs
     - /webjars/**
     - /h5/**
+    - /wx/**
   clients:
     - app
