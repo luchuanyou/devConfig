@@ -1,0 +1,94 @@
+server:
+  port: 4747
+#Redis cache 过期时间设置
+#redis:
+#  cache:
+#    expiration: 3600
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: developer
+    password: taolue-2018 #ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
+    url: jdbc:mysql://192.168.1.10:3306/zhj_dock?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+
+#mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: com.taolue.dock.entity
+ 
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 5
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 1
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    #逻辑删除配置（下面3个配置）
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+    #自定义填充策略接口实现
+    #meta-object-handler: 
+    
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+    
+## 嘉福接口url    
+baoxiao-dock-service-jiafu_url: https://test.jia-fu.cn/gw-api
+## 嘉福接口签名加密key
+baoxiao-dock-service-jiafu_secret: 0d4e87d870c7429bcc29c92cbaf8feb8
+## 嘉福接口ident（接入识别码）参数
+baoxiao-dock-service-ident: zhihuijia
+## 嘉福接口实名认证或银行卡认证 是否调用接口开关
+baoxiao-dock-service-open_interface: true
+## 收银台url回调
+baoxiao-enterprise-callback-url: http://baoxiao-enterprise:4009/coupon/apply/confirmPayment?
+## 对外服务验签接口密钥
+baoxiao-dock-service-secret: zhihuijia
+## 收银台接入标识
+baoxiao-dock-service-syt_channel: JF-QAP
+## 收银台请求url
+baoxiao-dock-service-syt_url: https://test.jia-fu.cn/gateway/portal
+
+## 短信发送开关
+dock-property-sms_flag: no
+
+####百望配置
+baiwang: 
+    common: 
+         client_id: 91310107MA1G0PT57D
+         token: 1132ec7ae2ba4a8abc1d6c79fb56e4a2
+         interface_switch: false
+    url:   
+        checked_url: http://zhipiaoyun.com/vat-tgw/api/callservice.do
+
+
+
+## 微信相关配置
+weixin:
+     common: 
+         appID: wx60708c3cd6296fc9        
+         ##wx1c2cd1f32c1364ba
+         appsecret: 2c8ca266919195e0b347603993890952
+         ###caa0426eed88031dba6d9190c94d70eb
+     host:
+         host-common: https://api.weixin.qq.com
+         host-sh: https://sh.api.weixin.qq.com
+         host-sz: https://sz.api.weixin.qq.com
+         host-hk: https://hk.api.weixin.qq.com
+     api:
+         url:
+            access_token: /cgi-bin/token
+            userInfo: /cgi-bin/user/info
+     template: 
+            url: /cgi-bin/message/template/send
+     zhj:
+         base_url: http://zhihuijia.imwork.net/home
+            
+              
