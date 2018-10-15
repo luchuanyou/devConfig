@@ -1,5 +1,5 @@
 server:
-  port: 4740
+  port: 4747
 #Redis cache 过期时间设置
 redis:
   cache:
@@ -44,7 +44,7 @@ baoxiao-dock-service-jiafu_url: https://test.jia-fu.cn/gw-api
 baoxiao-dock-service-jiafu_secret: 0d4e87d870c7429bcc29c92cbaf8feb8
 ## 嘉福接口ident（接入识别码）参数
 baoxiao-dock-service-ident: zhihuijia
-## 嘉福接口实名认证或银行卡认证 是否调用接口开关
+## 嘉福接口实名认证或银行卡认证 接口伐开关，true ：阀门关闭，不调用总部接口；false：打开
 baoxiao-dock-service-open_interface: true
 ## 收银台url回调
 baoxiao-enterprise-callback-url: http://baoxiao-enterprise:4009/coupon/apply/confirmPayment?
@@ -63,6 +63,7 @@ baiwang:
     common: 
          client_id: 91310107MA1G0PT57D
          token: 1132ec7ae2ba4a8abc1d6c79fb56e4a2
+         interface_switch: false
     url:   
         checked_url: http://zhipiaoyun.com/vat-tgw/api/callservice.do
 
