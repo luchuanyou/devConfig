@@ -1,5 +1,5 @@
 server:
-  port: 4747
+  port: 4740
 #Redis cache 过期时间设置
 redis:
   cache:
