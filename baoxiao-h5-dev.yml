@@ -33,10 +33,3 @@ h5:
         defaultBindGeid: ge_0fdb4462_7eda4a0e79ada88d9dec
         #c端用户默认绑定企业id
         defaultBindCompanyId: 1039736528094085122
-        #======首页商城=====
-        #嘉福总部首页商城秘钥key
-        mallKey: defde7ec0e86a6d183d9302877e5b3d7
-        #嘉福总部首页商城来源
-        mallSource: jfapp
-        #嘉福总部首页商城请求地址
-        mallUrl: https://jd-test.jia-fu.cn/shelf
